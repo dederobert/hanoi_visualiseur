@@ -1,0 +1,19 @@
+@import "base/all";
+@import "component/all";
+
+body {
+  width: 75%;
+  margin: auto;
+}
+
+button {
+  margin: 0 5px;
+  background-color: #56dcbe;
+  border: none;
+  cursor: pointer;
+}
+
+button:disabled {
+  color: #666;
+  cursor: not-allowed;
+}

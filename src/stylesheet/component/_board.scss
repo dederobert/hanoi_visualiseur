@@ -1,0 +1,6 @@
+.board{
+  //Largeur d'une tours plus 10px de marge *3
+  width: ($pellet_base_width * $nb_pellet + 10px) * 3;
+
+  height: ($pellet_base_height+1) * $nb_pellet + 32px; //Hauteur de tours + marge + border + name
+}

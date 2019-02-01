@@ -1,0 +1,30 @@
+.tower {
+  display: inline-block;
+  height: ($pellet_base_height+1) * $nb_pellet;
+  width: $pellet_base_width * $nb_pellet;
+  border-bottom: 2px solid;
+  margin: 5px;
+
+  &::before{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 2px;
+    height: ($pellet_base_height+1) * $nb_pellet;
+    margin-left: ($pellet_base_width * $nb_pellet)/2 - 1px; //Moitié de tours -1px pour la largeur
+    background-color: #000;
+    z-index: -1;
+  }
+
+  .tower-name {
+    padding-top: 2px;
+  }
+
+  .tower-name:first-child {
+    margin-top: 4 * ($pellet_base_height + 1px);
+  }
+
+  &:hover .ghost {
+    visibility: visible;
+  }
+}

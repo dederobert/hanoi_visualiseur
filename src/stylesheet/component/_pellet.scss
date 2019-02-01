@@ -1,0 +1,40 @@
+.pellet {
+  display: block;
+  margin: 1px auto;
+  height: $pellet_base_height - 2px;
+  background-color: $pellet_color;
+  border: 1px solid;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+
+  &:focus {
+    outline: 0;
+  }
+}
+.clicked {
+  opacity: 0.5;
+}
+
+.ghost {
+  background-color: green;
+  opacity: 0.5;
+  visibility: hidden;
+}
+
+.invalid {
+  background-color: red;
+}
+
+@for $i from 0 through ($nb_pellet - 1) {
+  .pellet-#{$i} {
+    width: $pellet_base_width * (1+$i);
+  }
+}
+
+@for $j from 1 through $nb_pellet {
+  button.tower-#{$j}:first-child {
+    margin-top: (4-$j) * ($pellet_base_height + 1px)  + ($j * 2px); //(Nb pellet manquant * taille + 1px) + (Nb pellet * marge)
+  }
+}
+
