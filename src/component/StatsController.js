@@ -2,6 +2,7 @@ import React from "react";
 import {Menu} from "./Menu";
 import {Graph} from "./Graph";
 import {Repartition} from "./Repartition";
+import {MyPie} from "./MyPie";
 
 export class StatsController extends React.Component{
 
@@ -84,6 +85,8 @@ export class StatsController extends React.Component{
 
                 <Graph responses={this.state.responses} title="Estimation temps moyen" field="evaluate_time" noLoader={true}/>
                 <Repartition responses={this.state.responses} field="evaluate_time" noLoader={true}/>
+
+                <MyPie responses={this.state.responses}/>
 
                 <Graph responses={this.state.responses} title="Focalisation moyenne" field="rate_focus" noLoader={true}/>
                 <Repartition responses={this.state.responses} field="rate_focus" noLoader={true}/>
