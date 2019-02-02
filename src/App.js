@@ -20,11 +20,10 @@ class App extends Component {
     render() {
     return (
       <div className="App">
-          <button onClick={()=>this.goStats()}>Voir les stats</button>
-          {this.state.user?<UserController goStep={(user)=>this.goStep(user)} goResponse={(user) => this.goResponse(user)}/>:null}
-          {this.state.response?<ResponseController user={this.state.userId} goUser={()=>this.goUser(null)}/>:null}
-          {this.state.step?<StepController user={this.state.userId} goUser={()=>this.goUser(null)}/>:null}
-          {this.state.stats?<StatsController/>:null}
+          {this.state.user?<UserController goStats={()=>this.goStats()} goStep={(user)=>this.goStep(user)} goResponse={(user) => this.goResponse(user)}/>:null}
+          {this.state.response?<ResponseController user={this.state.userId} goUser={()=>this.goUser()}/>:null}
+          {this.state.step?<StepController user={this.state.userId} goUser={()=>this.goUser()}/>:null}
+          {this.state.stats?<StatsController goUser={()=>this.goUser()}/>:null}
       </div>
     );
   }
@@ -37,8 +36,8 @@ class App extends Component {
       this.setState({user: false, response: true, step: false, stats: false, userId: user})
   }
 
-  goUser(user) {
-      this.setState({user: true, response: false, step: false, stats: false, userId: user})
+  goUser() {
+      this.setState({user: true, response: false, step: false, stats: false, userId: null})
   }
 
   goStats() {

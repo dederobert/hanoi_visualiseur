@@ -1,5 +1,6 @@
 import React from "react";
 import {User} from "./User";
+import {Menu} from "./Menu";
 
 export class UserController extends React.Component {
     constructor(props) {
@@ -50,7 +51,7 @@ export class UserController extends React.Component {
     renderUser() {
         var res = [];
         for(let i = 0; i < this.state.users.length; i++) {
-            res.push(<li><User user={this.state.users[i].user} steps={(user)=>this.props.goStep(user)} count={this.state.count[i]} responses={(user)=>this.props.goResponse(user)}/></li>);
+            res.push(<li key={i}><User user={this.state.users[i].user} steps={(user)=>this.props.goStep(user)} count={this.state.count[i]} responses={(user)=>this.props.goResponse(user)}/></li>);
         }
         return res;
     }
@@ -58,6 +59,7 @@ export class UserController extends React.Component {
     render() {
         return <div className="userController">
             <h1>Liste de utilisateurs</h1>
+            <Menu goUser={()=>{}} goStats={()=>this.props.goStats()}/>
             <p>Il y a actuellement {this.state.users.length} réponse(s)</p>
             <ul>
                 {this.renderUser()}

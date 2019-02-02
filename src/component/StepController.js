@@ -24,7 +24,7 @@ export class StepController extends React.Component {
     renderStep() {
         var res = [];
         for(let i = 0; i < this.state.steps.length; i++)
-            res.push(<Step step={this.state.steps[i]}/>)
+            res.push(<Step key={i} step={this.state.steps[i]}/>)
         return res;
     }
 

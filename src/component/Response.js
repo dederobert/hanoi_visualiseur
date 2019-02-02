@@ -2,9 +2,9 @@ import React from 'react'
 
 export function Response(props) {
     function getGameType(game_type) {
-        if(game_type == -1) return "Sans loader";
-        else if(game_type == 0) return "loader avec faible focus";
-        else if(game_type == 1) return "loader avec fort focus";
+        if(game_type === "-1") return "Sans loader";
+        else if(game_type === "0") return "loader avec faible focus";
+        else if(game_type === "1") return "loader avec fort focus";
     }
 
     return(

@@ -2,8 +2,10 @@
   "name": "untitled",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://dederobert.github.io/hanoi_visualiseur/",
   "dependencies": {
     "chart.js": "^2.7.3",
+    "gh-pages": "^2.0.1",
     "react": "^16.7.0",
     "react-chartjs-2": "^2.7.4",
     "react-dom": "^16.7.0",
