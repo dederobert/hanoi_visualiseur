@@ -65,39 +65,40 @@ export class StatsController extends React.Component{
                 <Graph responses={this.state.responses} title="Temps moyen" field='time'/>
                 <Repartition responses={this.state.responses} field="time" />
 
-                <Graph responses={this.state.responses} title="Intér&ecirc;t moyen pour le jeu" field='rate_interest'/>
+                <Graph responses={this.state.responses} title="Comment avez-vous trouvé le jeu ? (Intérêt)" field='rate_interest'/>
                 <Repartition responses={this.state.responses} field="rate_interest" />
 
-                <Graph responses={this.state.responses} title="Stimulation moyenne du jeu" field='rate_stimu'/>
+                <Graph responses={this.state.responses} title="Comment avez-vous trouvé le jeu ? (Stimulation)" field='rate_stimu'/>
                 <Repartition responses={this.state.responses} field="rate_stimu" />
 
 
-                <Graph responses={this.state.responses} title="Attrais moyen pour l'app" field='rate_visu'/>
+                <Graph responses={this.state.responses} title="Comment avez-vous trouvé l'application ? (Attraction)" field='rate_visu'/>
                 <Repartition responses={this.state.responses} field="rate_visu" />
 
-                <Graph responses={this.state.responses} title="Complexité moyen de l'app" field='rate_complexity'/>
+                <Graph responses={this.state.responses} title="Comment avez-vous trouvé l'application ? (Compléxité)" field='rate_complexity'/>
                 <Repartition responses={this.state.responses} field="rate_complexity"/>
 
-                <Graph responses={this.state.responses} title="Réactivité moyen de l'app" field='rate_reactivity'/>
+                <Graph responses={this.state.responses} title="Comment avez-vous trouvé l'application ? (Réactivité)" field='rate_reactivity'/>
                 <Repartition responses={this.state.responses} field="rate_reactivity"/>
 
                 <h2>Questions spécifique avec loader</h2>
 
-                <Graph responses={this.state.responses} title="Estimation temps moyen" field="evaluate_time" noLoader={true}/>
+                <Graph responses={this.state.responses} title="Combien de temps pensez-vous avoir attendu entre chaque coup ?" field="evaluate_time" noLoader={true}/>
                 <Repartition responses={this.state.responses} field="evaluate_time" noLoader={true}/>
 
+                <h2>Vous attendiez-vous à attendre plus ou moins longtemps entre chaque coup ?</h2>
                 <MyPie responses={this.state.responses}/>
 
-                <Graph responses={this.state.responses} title="Focalisation moyenne" field="rate_focus" noLoader={true}/>
+                <Graph responses={this.state.responses} title="Vous êtes vous focalisé(e) sur ce temps d'attente ?" field="rate_focus" noLoader={true}/>
                 <Repartition responses={this.state.responses} field="rate_focus" noLoader={true}/>
 
-                <Graph responses={this.state.responses} title="Moyenne temps d'attente raisonnable" field="rate_raisonnable" noLoader={true}/>
+                <Graph responses={this.state.responses} title="Avez-vous trouvé cette durée d'attente raisonnable ?" field="rate_raisonnable" noLoader={true}/>
                 <Repartition responses={this.state.responses} field="rate_raisonnable" noLoader={true}/>
 
-                <Graph responses={this.state.responses} title="Satisfaction moyenne temps d'attente" field="rate_time_satis" noLoader={true}/>
+                <Graph responses={this.state.responses} title="Etes-vous satisfait(e) de cette durée d'attente ?" field="rate_time_satis" noLoader={true}/>
                 <Repartition responses={this.state.responses} field="rate_time_satis" noLoader={true}/>
 
-                <Graph responses={this.state.responses} title="Moyenne temps d'attente justifiée" field="rate_wait" noLoader={true}/>
+                <Graph responses={this.state.responses} title="Avez-vous trouvé cette durée d'attente justifiée ?" field="rate_wait" noLoader={true}/>
                 <Repartition responses={this.state.responses} field="rate_wait" noLoader={true}/>
             </div>
         );
